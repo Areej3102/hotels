@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: linear-gradient(to left, #402cef, #b52de3);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px;
+            background-color: #2c3e50;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px; /* to account for the fixed nav bar */
+        }
+
+        .btn-custom {
+            background-color: blueviolet;
+            border: 0;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: darkviolet;
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+      <%- include('partials/nav.ejs') %> 
+    <div class="container">
+        <div class="content">
+            <h1>Admin Panel</h1>
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <a href="/addhotel" class="btn btn-custom">Add Hotel Manager</a>
+                </div>
+                <div class="col-12 mb-3">
+                    <a href="/deletehotels" class="btn btn-custom">Delete Hotel</a>
+                </div>
+                <div class="col-12 mb-3">
+                    <a href="/" class="btn btn-custom">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-csI5M/4kxjs1SOXb+MR5k0nEeNNm6E/nAwKCaTFdca/TpHwK1bkn9E4zV+brkMQ+" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

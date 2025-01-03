@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+			    padding-top: 155px;
+				background-image: linear-gradient(to left, #402cef, #b52de3);
+				font-size:2rem;
+        }
+
+        h1 {
+            color: aqua;
+			width:100%;
+			text-align:center;
+		
+        }
+
+        .center {
+               max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #33333378;
+    color: white;
+        }
+
+        div {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+			    font-size: 30px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <%- include('partials/nav.ejs') %>
+  
+    <div class="center" >
+	  <h1 style="color: aqua;
+			width:100%;
+			text-align:center;">Contact Us</h1>
+        <div>
+            <label for="name">Owner: Majed Al-khaled</label>
+       
+        </div>
+        <div>
+            <label for="email">Email: Majed@gmail.com</label>
+          
+        </div>
+        <div>
+            <label for="message">Mobile: 0938639027</label>
+            
+        </div>
+      
+    </div>
+</body>
+
+</html>

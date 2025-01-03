@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: linear-gradient(to left, #402cef, #b52de3);
+        }
+
+        .card-header {
+            margin-top: 55px;
+            color: white;
+            text-align: left;
+        }
+
+        .btn-custom {
+            background-color: blueviolet;
+            border: 0;
+        }
+
+        .room-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .featured-services .card {
+            border: none;
+            text-align: center;
+            background: transparent;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+		.card-img-top {
+    height: 240px;
+
+}
+    </style>
+</head>
+
+<body>
+    <%- include('partials/nav.ejs') %>
+    <div class="container mt-5">
+        <div class="card text-center" style="background: transparent;">
+            <div class="card-header">
+                <h1>
+                    Welcome to Majds Hotels
+                </h1>
+                <h3>We treat our customers like valued guests and strive daily to enhance their experience.</h3>
+            </div>
+            <div class="card-body">
+                <a href="/login">
+                    <button type="button" class="btn btn-primary btn-custom">Sign In</button>
+                </a>
+                <a href="/register">
+                    <button type="button" class="btn btn-dark btn-custom">Sign Up</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Featured Rooms Section -->
+        <section class="mt-5">
+            <h2 class="text-white">Featured Rooms</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card room-card">
+                        <img class="card-img-top" src="imgs/deluxe.jpg" alt="Room 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Deluxe Room</h5>
+                            <p class="card-text">A luxurious room with a beautiful sea view.</p>
+                          
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card room-card">
+                        <img class="card-img-top" src="imgs/suite.jpg" alt="Room 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Suite</h5>
+                            <p class="card-text">A spacious suite with modern amenities.</p>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card room-card">
+                        <img class="card-img-top" src="imgs/Standard.jpg" alt="Room 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Standard Room</h5>
+                            <p class="card-text">Comfortable and affordable.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Services Section -->
+        <section class="mt-5 featured-services">
+            <h2 class="text-white">Featured Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="imgs/serv1.jpg" alt="Service 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Spa & Wellness</h5>
+                            <p class="card-text">Relax and rejuvenate with our top-notch spa services.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="imgs/serv2.jpg" alt="Service 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Gourmet Dining</h5>
+                            <p class="card-text">Experience fine dining at our gourmet restaurant.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="imgs/serv3.jpg" alt="Service 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Fitness Center</h5>
+                            <p class="card-text">Stay fit with our state-of-the-art fitness facilities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section class="mt-5">
+            <h2 class="text-white">Contact Us</h2>
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-custom">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-csI5M/4kxjs1SOXb+MR5k0nEeNNm6E/nAwKCaTFdca/TpHwK1bkn9E4zV+brkMQ+" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

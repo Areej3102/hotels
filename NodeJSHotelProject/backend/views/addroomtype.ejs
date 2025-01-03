@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Hotel Manager</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: linear-gradient(to left, #402cef, #b52de3);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        label {
+            color: white;
+            text-align: left;
+        }
+
+        .btn-custom {
+            background-color: blueviolet;
+            border: 0;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: darkviolet;
+        }
+    </style>
+</head>
+<body>
+    <%- include('partials/nav.ejs') %>
+    <div class="container">
+        <h2>Add Rooms Type</h2>
+        <form method="post" action="/addroomtype" name="register_form" class="form-group">
+            <div class="input-group mb-3">
+                <label for="tname" class="col-sm-12 col-form-label">Type name</label>
+                <input type="text" class="form-control" name="tname" placeholder="Type name" aria-label="tname" aria-describedby="basic-addon3" id="tname" required>
+                <input type="hidden" name="UID" value="<%= UID %>">
+            </div>
+            <div class="invalid-feedback">You must agree before submitting.</div>
+            <div class="input-group">
+                <button type="submit" class="btn btn-custom">Add Type</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

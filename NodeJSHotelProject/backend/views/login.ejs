@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: linear-gradient(to left, #402cef, #b52de3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-container h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            color: white;
+        }
+
+        .btn-custom {
+            background-color: blueviolet;
+            border: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('partials/nav.ejs') %>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form method="post" action="/login" name="login_form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" class="form-control" placeholder="Username" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword">Password</label>
+                <input type="password" name="password" class="form-control" placeholder="Password" id="inputPassword" aria-describedby="passwordHelpInline" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-custom">Login</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-csI5M/4kxjs1SOXb+MR5k0nEeNNm6E/nAwKCaTFdca/TpHwK1bkn9E4zV+brkMQ+" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
